@@ -1,6 +1,11 @@
-# DS_Store
+.idea/
+*.iml
+*.iws
+*.eml
+out/
 .DS_Store
-
-# .vscode
-.vscode
-
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
