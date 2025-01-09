@@ -1,0 +1,192 @@
+/*********************************************
+ * Customized styles 
+*********************************************/
+.reveal .slides section {
+    max-width: 90%;
+}
+
+/* 2カラムレイアウトの調整 */
+.container {
+    display: flex;
+    width: 100%;
+    padding-left: 0;
+    margin-left: -2%;
+    margin-right: -2%;
+    gap: 15px;
+}
+  
+.col {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.col-left {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+    margin-left: -5%;
+    font-size: 0.7em;
+}
+
+.col-right {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+    margin-right: -5%;
+    font-size: 0.7em;
+}
+
+.col-box {
+    background-color: #f8f9fa;
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid #0084ff;
+}
+
+.col-box-left {
+    background-color: #f8f9fa;
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid #0084ff;
+    margin-left: -5%;
+    font-size: 0.9em;
+}
+
+.col-box-right {
+    background-color: #f8f9fa;
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid #0084ff;
+    margin-right: -5%;
+    font-size: 0.9em;
+}
+
+.code-block {
+    background: #002b36;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.col-code-block-left {
+    background: #002b36;
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 0.75em;
+    margin-left: 0%;
+}
+
+.col-code-block-right {
+    background: #002b36;
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 0.75em;
+    margin-right: -20%;
+}
+
+.col-message-block-right {
+    background: #ffffff;
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    text-align: left;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85em;
+    line-height: 1.6;
+    border: 1px solid #e1e4e8;
+    margin-right: -20%;
+    color: #24292e;
+}
+
+.col-message-block-left {
+    background: #ffffff;
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    text-align: left;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85em;
+    line-height: 1.6;
+    border: 1px solid #e1e4e8;
+    margin-left: -20%;
+    color: #24292e;
+}
+
+.profile-container {
+    display: flex;
+    width: 100%;
+    gap: 125px;  /* 左右のカラム間のスペース */
+}
+
+/* プロフィールカード用のカラム */
+.profile-left {
+    flex: 10;
+    background-color: #f8f9fa;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 180%;
+    text-align: left;
+    font-size: 28px;
+    margin-left: 0%;
+    margin-right: -10%;
+    padding: 20px 20px;
+    position: relative;
+    border: 2px solid #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* アバター画像用のカラム */
+.profile-right {
+    flex: 10;
+    display: flex;
+    align-items: center; 
+    position: relative;
+    margin-right: -10%;
+}
+
+.highlight-box {
+    background-color: #f8f9fa;
+    border-left: 16px solid #0084ff;
+    padding: 5px;
+    padding-left: 15px;
+    text-align: left;
+    width: 110%;
+    margin-left: -5%;
+}
+
+.simple-box {
+    background-color: #f8f9fa;
+    display: flex;
+    width: 110%;
+    padding: 10px;
+    padding-left: 10px;
+    margin-left: -5%;
+    padding-right: 10px;
+    margin-right: 0%;
+    gap: 15px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}

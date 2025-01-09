@@ -1,55 +1,58 @@
-# プロジェクト名
-プロジェクト名を書いてください。
+# vrc-solar-activity-on-IT
 
 ## 概要
-プロジェクトの概要を書いてください。
+
+2025年2月1日、VRChatの技術系イベント「ITインフラ集会」のLTセッションでの発表スライドです。
 
 ## 開発環境
-開発環境について書きます。以下が例です。
 
-- OS: Ubuntu-18.04 (AWS EC2 instance xrdp01-gui)
-- Python: 3.8.6
+[reveal.js](https://github.com/hakimel/reveal.js) によってスライドの作成をしています。
+Node.js, npmが利用できる環境で、以下のコマンドで開発環境の構築ができます: 
 
-## インストール方法
-インストール方法を書いてください。
-以下のようなコマンドを書くなどすると手順がわかりやすくなるでしょう。
-
-```
-make install
+```bash
+npm install
 ```
 
 ## 使い方
-実行方法やチュートリアルを書いてください。
-必要に応じてスクリーンショットや動画を使ってください。
 
-## その他
-必要なことがあれば書いてください。
+### スライド作成
 
-_____
+以下のコマンドでローカルサーバーを起動:
 
-# Project name
-Write the name of the project.
-
-## Overview
-Write an overview of the project.
-
-## Development environment
-Write about the development environment. The following is an example.
-
-- OS: Ubuntu-18.04 (AWS EC2 instance xrdp01-gui)
-- Python: 3.8.6
-
-## Installation
-Write down the installation procedure.
-Commands will be useful to make clear as:
-
-```
-make install
+```bash
+npm start
 ```
 
-## Usage
-Write a running procedure or tutorial.
-Use screenshots and videos if necessary.
+ブラウザで [http://localhost:8000](http://localhost:8000) にアクセスすると、スライドをプレビューできます。
 
-## Others
-Anything else, please write here.
+### スライドをpdfでエクスポート
+
+`decktape`を使ってスライドをPDFにエクスポートできます。
+
+1. `decktape`のインストール
+
+```bash
+npm install -g decktape
+```
+
+1. PDFエクスポート
+
+以下のコマンドで`html`で書いたスライドをpdfにエクスポートできます:
+
+``` bash
+# 16:9のスライドの場合
+decktape --size 1920x1080 index.html slides.pdf
+
+# 4:3のスライドの場合
+decktape --size 1600x1200 index.html slides.pdf
+```
+
+## 免責事項
+
+- 本スライドの内容に従ったいかなる結果において著者は一切の責任を負いません
+
+## LICENSE
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+This project uses [reveal.js](https://github.com/hakimel/reveal.js) which is also licensed under the MIT License.
