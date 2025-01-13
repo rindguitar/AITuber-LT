@@ -37,6 +37,11 @@
     font-size: 0.7em;
 }
 
+.col-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .col-box {
     background-color: #f8f9fa;
     flex: 1;
