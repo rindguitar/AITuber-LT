@@ -224,7 +224,7 @@ _『AITuberを作ってみたらプロンプトエンジニアリングがよく
 
 <div class="simple-box" data-markdown>
 
- * 配信をするためにOBS、音声合成のためにVOICEVOXを利用。
+ * 配信ソフトとしてOBS、音声合成のためにVOICEVOX、仮想マイクとしてVB-CABLEを利用。
 
 </div>
 
@@ -242,27 +242,24 @@ _『AITuberを作ってみたらプロンプトエンジニアリングがよく
 
 ---
 
-### 歴史的な大規模太陽嵐
+### 配信をするためのプログラム作成
 
 <div class="simple-box" data-markdown>
 
-* 1859年: キャリントンイベント
-* 1989年: カナダのケベック州大停電
-* 2012年: ニアミス！大規模太陽嵐の直撃を回避
-* 2024年: 現代の高度情報社会に対する警鐘
+* 配信上でキャラクターが言いそうなことを追加した設定プロンプトを作成。
+  - 性格や口調などはもちろん、繊細な話題など言わなそうなこともしっかりと設定しないと理想とはかけ離れた話題まで話してしまいます。
+* コメントへの返答、コメントが無い場合の話題を生成するプログラムを作成。
 
 </div>
 
 ---
 
-### 1989年のケベック州大停電
 
+### 話す内容を配信に利用するための準備
 <div class="simple-box" data-markdown>
 
-* **太陽嵐がカナダのケベック州全州で9時間の停電を引き起こした**
-    * 600万人が影響を受けた大規模停電
-    * 変圧器の連鎖故障で完全な復旧まで数週間
-* 世界中の電力会社が対策を強化
+* 話す内容とコメントをOBSに送るプログラムを作成。
+* 話す内容から音声合成するプログラムと、その音声を再生するプログラムの作成。
 
 </div>
 
@@ -270,14 +267,12 @@ _『AITuberを作ってみたらプロンプトエンジニアリングがよく
 
 ---
 
-### ニアミスだった2012年の太陽嵐
+### 各種機能を統合したプログラムを作成
 
 <div class="simple-box" data-markdown>
 
-* **2012年7月に発生した大規模太陽嵐**
-	* キャリントンイベント級の大規模太陽嵐
-	* 発生が9日間遅れてたら地球を直撃していた
-	* もし直撃していたら...
+* 配信するために今までに作ったプログラムを統合したプログラムを作成し、実行。
+* 配信が始まった！
 
 </div>
 
@@ -285,41 +280,28 @@ _『AITuberを作ってみたらプロンプトエンジニアリングがよく
 
 ---
 
-### まとめ
+### どのようなことで躓き、解決したのか？
 
-<div class="highlight-box" data-markdown>
+<div class="simple-box" data-markdown>
 
-* 私たちは宇宙天気と隣り合わせで働いている
-    - 2025年は太陽活動のピーク!
-    - キャリントンイベント級の可能性も？
-* 巨人たちの対応
-    * 各国政府や宇宙機関、Googleなどの巨大IT企業も本気で対策
-    * ...でも、私たちは？
-- 意外な結論：**普段通りが最強**
-    - 基本的な対策を地道に積み重ねる
-
+* プロンプトの作成が難しかった。
+  - キャラクターの設定など0から考えるのが難しかったので、LLMに頼ることで解決。
+* プログラムが増えた際、見やすく管理するしつつ、上手く動作させることに躓いた。
+  - sys.path.append()を使用し解決。
+  - ただし、使うべきではないと言う記事もあったのでより良い方法を模索する。
 </div>
 
 ---
 
-### 参考文献
+### まとめ
 
-* キャリントンイベントをはじめとした過去の大規模太陽嵐の事例
-	* [【ゆっくり解説】人類強制インターネットデトックス！キャリントン・イベントについて語るぜ！](https://www.youtube.com/watch?v=iIeURg3SyDg&pp=ygUe44Kt44Oj44Oq44Oz44OI44Oz44Kk44OZ44Oz44OI)
-	* [Eyewitness reports of the great auroral storm of 1859](https://www.sciencedirect.com/science/article/abs/pii/S0273117706000160)
-	* [The Great Québec Blackout](https://spaceweatherarchive.com/2021/03/12/the-great-quebec-blackout/)
-	* [Solar Storm Knocks Out Farmers' Tractor GPS Systems During Peak Planting Season](https://www.404media.co/solar-storm-knocks-out-tractor-gps-systems-during-peak-planting-season/)
+<div class="highlight-box" data-markdown>
 
----
-
-### 参考文献
-
-* 大規模太陽嵐への対策
-	* [Extreme space weather: impacts on engineered systems and infrastructure](https://raeng.org.uk/media/lz2fs5ql/space_weather_full_report_final.pdf)
-	* [Does the internet need sunscreen? No, submarine cables are protected from solar storms](https://cloud.google.com/blog/products/infrastructure/are-internet-subsea-cables-susceptible-to-solar-storms?hl=en)
-	* [On the probability of occurrence of extreme space weather events](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011sw000734)
-	* [Near Miss: The Solar Superstorm of July 2012](https://science.nasa.gov/science-research/planetary-science/23jul_superstorm/)
-	* [Space weather effects on technology](https://www.spaceweather.gc.ca/tech/index-en.php)
+* プログラミング楽しい！
+  - できあがって自分の思った通りに動くときや、細かいミスを見つけた時の快感が最高。
+* ただし途中から利用しはじめたCursorの補助によって、コーディングが初心者でも楽にできてしまう。
+  - よく理解せず動作している時の不安もあるが、動作してるから良いかと思ってしまう気持ちがある。
+</div>
 
 ---
 
