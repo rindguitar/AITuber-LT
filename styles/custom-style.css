@@ -10,9 +10,10 @@
     display: flex;
     width: 100%;
     padding-left: 0;
-    margin-left: -2%;
-    margin-right: -2%;
-    gap: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 30px;
+    justify-content: center;
 }
   
 .col {
@@ -25,7 +26,7 @@
     flex: 1;
     padding: 10px;
     text-align: left;
-    margin-left: -5%;
+    margin-left: 0;
     font-size: 0.7em;
 }
 
@@ -33,7 +34,7 @@
     flex: 1;
     padding: 10px;
     text-align: left;
-    margin-right: -5%;
+    margin-right: 0;
     font-size: 0.7em;
 }
 
